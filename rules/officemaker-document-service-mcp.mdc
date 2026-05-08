@@ -1,0 +1,14 @@
+---
+description: Safe agent flow when calling OfficeMaker Document Service MCP (schema before create, structured payloads).
+alwaysApply: false
+---
+
+When using the **officemaker-documents** MCP (OfficeMaker Document Service):
+
+1. **Never** invent document JSON from memory. Call **`get_minimal_schema`** for the target `documentType` (`word`, `excel`, or `powerpoint`) first and follow the returned shape, `minimalExample`, and notes.
+2. Prefer **`validate_document_payload`** before **`create_document_structured`** when available.
+3. Pass **`documentJson` as a nested object** in tool arguments — do not double-escape JSON strings unless the user explicitly asks for raw REST payload text.
+4. If the host returns **`schemaAttestation`**, keep it and send it with **`create_document_structured`** when the deployment requires it (strict agent payloads on paid tiers).
+5. Free-tier MCP does not expose edit/merge/amend schema; do not assume those tools exist on the public host.
+
+For transport, auth, and metering details, rely on the official developer documentation linked from the plugin README.

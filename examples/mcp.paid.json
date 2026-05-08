@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "officemaker-documents-paid": {
+      "url": "https://docs.officemaker.ai/mcp",
+      "headers": {
+        "X-Document-Service-User-Api-Key": "${env:OFFICEMAKER_DOCUMENT_SERVICE_USER_API_KEY}"
+      }
+    }
+  }
+}

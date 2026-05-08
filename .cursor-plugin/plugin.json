@@ -1,0 +1,24 @@
+{
+  "name": "officemaker-document-service-mcp",
+  "version": "1.0.0",
+  "description": "OfficeMaker Document Service MCP — create Word, Excel, and PowerPoint files from JSON via hosted Streamable HTTP (free public tier by default; optional paid host with API key).",
+  "author": {
+    "name": "OfficeMaker"
+  },
+  "homepage": "https://officemaker.ai",
+  "repository": "https://github.com/TimSavigar/officemaker-document-service-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "officemaker",
+    "documents",
+    "word",
+    "excel",
+    "powerpoint",
+    "docx",
+    "xlsx",
+    "pptx",
+    "office"
+  ],
+  "logo": "assets/logo.svg"
+}
